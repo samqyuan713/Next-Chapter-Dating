@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Default Welcome Palette - Warm luxury peach and sandalwood creams */
+  --color-stone-50: #FFFDF9;       /* Welcoming ivory cream */
+  --color-stone-100: #FEF5EE;      /* Warm apricot blossom */
+  --color-stone-200: #FCE8DA;      /* Soft blushing horizon border */
+  --color-stone-300: #F8D7C2;      /* Elegant pastel coral shadow */
+  --color-stone-400: #E6A292;      /* Sand copper helper */
+  --color-stone-500: #C26E60;      /* Velvet terracotta accent */
+  --color-stone-600: #A15243;      /* Earthy sandalwood label */
+  --color-stone-700: #7A352A;      /* Rich cedarwood primary text */
+  --color-stone-800: #541E15;      /* High-respect mahogany text */
+  --color-stone-850: #42110B;      /* Elite espresso wood */
+  --color-stone-900: #310905;      /* Royal chocolate plum */
+  --color-stone-950: #1B0301;      /* Abyssal silk velvet */
+
+  /* Override standard gray palette to alias stone for safety */
+  --color-gray-50: var(--color-stone-50);
+  --color-gray-100: var(--color-stone-100);
+  --color-gray-200: var(--color-stone-200);
+  --color-gray-300: var(--color-stone-300);
+  --color-gray-400: var(--color-stone-400);
+  --color-gray-500: var(--color-stone-500);
+  --color-gray-600: var(--color-stone-600);
+  --color-gray-700: var(--color-stone-700);
+  --color-gray-800: var(--color-stone-800);
+  --color-gray-900: var(--color-stone-900);
+  --color-gray-950: var(--color-stone-950);
+
+  /* Deep Jade & Scholar Green (Override Emerald with deep Sage Scholar Green) */
+  --color-emerald-50: #F3F6F0;
+  --color-emerald-100: #E8EDC3;    /* Cream-sage background */
+  --color-emerald-200: #CAD5A5;    /* Olive moss border */
+  --color-emerald-300: #A0B58E;    /* Soft sage green */
+  --color-emerald-400: #7C956A;    /* Soft sage green medium */
+  --color-emerald-500: #586A48;    /* Earthy medium sage */
+  --color-emerald-600: #465638;    /* Dark forest scholar */
+  --color-emerald-700: #293A24;    /* Solid deep jade green */
+  --color-emerald-805: #212E1C;
+  --color-emerald-950: #121A0F;
+
+  /* Red Packets & Blessing Wax (Override Rose with double happiness Cinnabar Seal Red) */
+  --color-rose-50: #FFF5F5;
+  --color-rose-100: #FFE3E4;
+  --color-rose-200: #FCBFC2;
+  --color-rose-400: #F68B91;       /* Blessing poppy */
+  --color-rose-500: #E53E4B;       /* Sealed letter cinnabar */
+  --color-rose-600: #C11E2D;       /* Classic red packet wax red */
+  --color-rose-700: #8C0A15;       /* Sincere velvet garnet */
+  --color-rose-950: #2D0206;
+}
+
+html, body {
+  background-color: var(--color-stone-50);
+  color: var(--color-stone-800);
+  font-family: var(--font-sans);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   RESTFUL MATCH ROOM & HIGH-MOUNTAIN TEA VALUE OVERRIDES (🌱 Earthy)
+   ========================================================================== */
+
+.theme-earthy {
+  /* Restful, natural linen colors corresponding to high quality mountain leaves */
+  --color-stone-50: #FAF8F5;      /* Warm eggshell linen room */
+  --color-stone-100: #F3EFE6;     /* Light matcha crema */
+  --color-stone-200: #E5DCC9;     /* Soft bamboo timber strip */
+  --color-stone-300: #D2C2AA;     /* Soft pottery white clay */
+  --color-stone-400: #BCA98E;     /* Sand jute thread */
+  --color-stone-500: #8C7C63;     /* Muted aged cedar bark */
+  --color-stone-600: #70624C;     /* High mountain tea leaf */
+  --color-stone-700: #574B38;     /* Ground red clay */
+  --color-stone-800: #423829;     /* Deep pressed Pu-erh block */
+  --color-stone-850: #332A1E;     /* Iron tea kettle burner */
+  --color-stone-900: #241E15;     /* Traditional mahogany tea tray */
+  --color-stone-950: #15110C;     /* Warm dark charcoal obsidian */
+}
+
+/* ==========================================================================
+   ROMANTIC PEACH BLOSSOM & SEWax EMBELLISHMENT (💖 Romantic)
+   ========================================================================== */
+
+.theme-romantic {
+  /* High fidelity bridal peach-coral and sweet double happiness wax reds */
+  --color-stone-50: #FFF9F9;      /* Delicate bridal silk rose */
+  --color-stone-100: #FFF0F1;     /* Shimmering sweet blossom crema */
+  --color-stone-200: #FFD4D7;     /* Soft pale coral petal line */
+  --color-stone-300: #FCAEB3;     /* Pastel blossom dusk */
+  --color-stone-400: #E07A80;     /* Antique copper lantern glow */
+  --color-stone-500: #C93B43;     /* Sealed happiness wax seal red */
+  --color-stone-605: #A82027;     /* Cherry wood glaze */
+  --color-stone-700: #851218;     /* Rich ancestral wine dye */
+  --color-stone-800: #610408;     /* High contrast deep garnet black */
+  --color-stone-850: #4A0205;     /* Dark mahogany cabinet */
+  --color-stone-900: #360001;     /* Midnight cherry plum */
+  --color-stone-950: #1F0001;     /* Infinite sweet red tea void */
+}
+
+/* ==========================================================================
+   MIDNIGHT LAVENDER SILK & STAR SHIELD GLOW (🌌 Midnight)
+   ========================================================================== */
+
+.theme-midnight {
+  /* Celestial moonlight and romantic starry night space amethyst colors */
+  --color-stone-50: #FAF5FD;      /* Starfall lunar mist background */
+  --color-stone-100: #F0E3FB;     /* Dreamy lavender vapor */
+  --color-stone-200: #E0C7F5;     /* Shimmering amethyst blossom frame */
+  --color-stone-300: #C39CE2;     /* Velvet cosmic dust orchid */
+  --color-stone-400: #A170CE;     /* Starfall royal purple helper */
+  --color-stone-500: #7E46B6;     /* Dream twilight lavender flower */
+  --color-stone-600: #602996;     /* Starfall royal iris label */
+  --color-stone-700: #48157B;     /* True majestic ink purple */
+  --color-stone-800: #340760;     /* Celestial deep violet silk */
+  --color-stone-850: #250248;     /* Velvet navy depth */
+  --color-stone-900: #190132;     /* Infinite starry onyx */
+  --color-stone-950: #0D001C;     /* Ultimate lilac star shadow */
+}
+
+/* ==========================================================================
+   GENERAL COMPONENT BEUTIFICATION & MODERN CORNERS
+   ========================================================================== */
+
+header {
+  border-bottom-color: rgba(var(--color-stone-200), 0.35) !important;
+  box-shadow: 0 4px 20px -5px rgba(var(--color-stone-500), 0.05);
+  transition: all 0.5s ease;
+}
+
+body .bg-white, body .bg-white\/80, body .bg-white\/95 {
+  border-color: var(--color-stone-200) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modern Pill Buttons & Premium Spring Transitions */
+button {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:active {
+  transform: scale(0.96) !important;
+}
+
+/* Input Fields - Deep Warm Inset Focus State */
+input[type="text"], 
+input[type="number"], 
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  background-color: var(--color-stone-50) !important;
+  border-color: var(--color-stone-200) !important;
+  color: var(--color-stone-850) !important;
+  transition: all 0.3s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+  background-color: #FFFFFF !important;
+  border-color: var(--color-stone-500) !important;
+  box-shadow: 0 0 0 3px rgba(var(--color-stone-500), 0.1) !important;
+  outline: none !important;
+}
+
+/* Theme Switching Animation */
+.theme-earthy, .theme-romantic, .theme-midnight {
+  transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Gentle romantic pulsing button glow */
+.pulse-rose-glow {
+  box-shadow: 0 0 0 0 rgba(229, 62, 75, 0.45);
+  animation: pulse-rose-ani 2s infinite;
+}
+
+@keyframes pulse-rose-ani {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 62, 75, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(229, 62, 75, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 62, 75, 0);
+  }
+}
+
+/* Premium Dating Aesthetic Enhancements */
+.premium-gradient-rose {
+  background: linear-gradient(135deg, #F05179 0%, #D12555 100%);
+}
+
+.premium-card-blur {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.premium-glow-shadow {
+  box-shadow: 0 20px 40px -15px rgba(209, 37, 85, 0.15);
+}
+
+.premium-halo {
+  position: relative;
+}
+.premium-halo::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, #FF9E9E, #F43F5E, #FB7185, #F43F5E);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.15;
+  filter: blur(4px);
+  animation: rotate-premium-halo 6s linear infinite;
+}
+
+@keyframes rotate-premium-halo {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.smooth-spring {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-text-gradient-rose {
+  background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-gold-border {
+  border: 1.5px solid rgba(218, 165, 32, 0.3);
+  box-shadow: 0 0 15px rgba(218, 165, 32, 0.08);
+}
